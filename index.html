@@ -23,10 +23,12 @@
     }
 
 .hero-image {
+  display: block;
   width: 100%;
-  max-width: 780px;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
+  margin: 0 auto 1.5rem;
   box-shadow: 0 0 60px rgba(214,179,106,0.25);
 }
     
@@ -93,13 +95,14 @@
     }
 
     .featured-image {
-      border: 1px solid rgba(214,179,106,0.4);
-      padding: 3rem;
-      text-align: center;
-      margin: 3rem 0;
-      background: rgba(255,255,255,0.02);
-      box-shadow: 0 0 40px rgba(214,179,106,0.15);
-    }
+  border: 1px solid rgba(214,179,106,0.4);
+  padding: 1.5rem;              /* reduced padding */
+  text-align: center;
+  margin: 3rem 0;
+  background: rgba(255,255,255,0.02);
+  box-shadow: 0 0 40px rgba(214,179,106,0.15);
+  overflow: hidden;             /* IMPORTANT */
+}
 
     table {
       width: 100%;
