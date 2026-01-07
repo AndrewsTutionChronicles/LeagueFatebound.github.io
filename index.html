@@ -84,33 +84,11 @@
       color: var(--gold-soft);
     }
 
-  .featured-image {
-      border: 1px solid rgba(214,179,106,0.4);
-      padding: 1.5rem;
-      text-align: center;
-      margin: 3rem 0;
-      background: rgba(255,255,255,0.02);
-      box-shadow: 0 0 40px rgba(214,179,106,0.15);
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .hero-image {
-      display: block;
-      width: 90%;
-      max-width: 550px;
-      height: auto;
-      margin: 0 auto 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 0 60px rgba(214,179,106,0.25);
-      filter: brightness(1.05) contrast(1.1);
-      transition: transform 0.6s ease, box-shadow 0.6s ease;
-    }
-
-    .hero-image:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 80px rgba(214,179,106,0.35);
-    }
+  /* RESPONSIVE */
+@media(max-width:900px){
+  .container{grid-template-columns:1fr;}
+  header h1{font-size:2.3rem;}
+}
 
     table {
       width: 100%;
