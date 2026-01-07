@@ -1,238 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>The League: Fatebound</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>The League: Fatebound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --bg-deep:#04050c;
-  --bg-mid:#0b1026;
-  --panel:#0f1430;
-  --gold:#d6b36a;
-  --gold-soft:#f2e6c3;
-  --text-main:#e8e6e3;
-  --text-muted:#b8b6b1;
-}
+  <style>
+    :root {
+      --bg-dark: #04050c;
+      --bg-mid: #0b1026;
+      --panel: #0f1430;
+      --gold: #d6b36a;
+      --gold-soft: #f3e6c2;
+      --text-main: #e8e6e3;
+      --text-muted: #b8b6b1;
+    }
 
-/* RESET */
-*{box-sizing:border-box;margin:0;padding:0}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* BODY – MCU DOOMSDAY STYLE */
-body{
-  font-family:'Cormorant Garamond',serif;
-  color:var(--text-main);
-  background:
-    radial-gradient(circle at top,#1a2255 0%,var(--bg-deep) 60%),
-    url("https://www.transparenttextures.com/patterns/stardust.png");
-  line-height:1.85;
-}
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background:
+        radial-gradient(circle at top, #1b245a 0%, var(--bg-dark) 60%),
+        url("https://www.transparenttextures.com/patterns/stardust.png");
+      color: var(--text-main);
+      line-height: 1.85;
+    }
 
-/* MAIN CONTAINER */
-main{
-  max-width:960px;
-  margin:auto;
-  padding:4rem 1.5rem 6rem;
-}
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 4rem 1.5rem 6rem;
+    }
 
-/* HEADER */
-header{
-  text-align:center;
-  margin-bottom:4rem;
-}
+    /* HEADERS */
+    h1, h2 {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px rgba(214,179,106,0.35);
+    }
 
-header h1{
-  font-family:'Cinzel',serif;
-  font-size:3.2rem;
-  letter-spacing:.18em;
-  color:var(--gold);
-  text-transform:uppercase;
-  text-shadow:0 0 35px rgba(214,179,106,.35);
-}
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+    }
 
-header p{
-  margin-top:.8rem;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:1.25rem;
-  color:var(--gold-soft);
-}
+    h2 {
+      margin-top: 4.5rem;
+      font-size: 1.6rem;
+    }
 
-/* FEATURED IMAGE – FANDOM STYLE */
-.featured-image{
-  text-align:center;
-  margin:4rem 0;
-}
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
 
-.featured-image img{
-  width:100%;
-  max-width:700px;
-  border:1px solid rgba(214,179,106,.35);
-  box-shadow:
-    0 0 60px rgba(0,0,0,.9),
-    inset 0 0 25px rgba(214,179,106,.15);
-}
+    header p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--gold-soft);
+    }
 
-.featured-image p{
-  margin-top:1.5rem;
-  font-style:italic;
-  color:var(--gold-soft);
-}
+    /* FEATURED IMAGE */
+    .featured-image {
+      text-align: center;
+      margin: 4rem 0;
+    }
 
-/* SECTION HEADERS */
-h2{
-  font-family:'Cinzel',serif;
-  font-size:1.7rem;
-  color:var(--gold);
-  letter-spacing:.12em;
-  text-align:center;
-  margin:4.5rem 0 1.5rem;
-}
+    .featured-image img {
+      width: 100%;
+      max-width: 700px;
+      border: 1px solid rgba(214,179,106,0.35);
+      box-shadow:
+        0 0 60px rgba(0,0,0,0.9),
+        inset 0 0 25px rgba(214,179,106,0.15);
+    }
 
-/* PARAGRAPHS */
-p{
-  font-size:1.15rem;
-  margin:1rem 0;
-  text-align:justify;
-}
+    .featured-image p {
+      margin-top: 1.5rem;
+      font-style: italic;
+      color: var(--gold-soft);
+    }
 
-/* HORIZONTAL RULE – MCU STYLE */
-hr{
-  border:none;
-  height:1px;
-  margin:4.5rem 0;
-  background:linear-gradient(
-    to right,
-    transparent,
-    var(--gold),
-    transparent
-  );
-}
+    /* TEXT */
+    p {
+      font-size: 1.15rem;
+      margin: 1rem 0;
+    }
 
-/* TABLE – WIKI INFOBOX FEEL */
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:2rem;
-  background:rgba(15,20,48,.45);
-  border:1px solid rgba(214,179,106,.25);
-}
+    em {
+      color: var(--gold-soft);
+    }
 
-th,td{
-  padding:1rem 1.2rem;
-  border-bottom:1px solid rgba(214,179,106,.2);
-}
+    strong {
+      color: var(--text-main);
+    }
 
-th{
-  width:35%;
-  font-family:'Cinzel',serif;
-  color:var(--gold);
-  letter-spacing:.08em;
-  text-align:left;
-}
+    /* DIVIDERS */
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 4.5rem 0;
+    }
 
-td{
-  color:var(--text-main);
-}
+    /* TABLES */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: rgba(15, 20, 48, 0.45);
+      border: 1px solid rgba(214,179,106,0.25);
+    }
 
-/* LISTS */
-ul{
-  list-style:none;
-  margin-top:1.5rem;
-}
+    th, td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid rgba(214,179,106,0.2);
+    }
 
-ul li{
-  padding:.5rem 0;
-  color:var(--text-muted);
-}
+    th {
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+      width: 35%;
+      text-align: left;
+    }
 
-ul li::before{
-  content:"✦ ";
-  color:var(--gold);
-}
+    td {
+      color: var(--text-main);
+    }
 
-/* PROPHECY / QUOTE BLOCK */
-.prophecy{
-  margin:3rem auto;
-  text-align:center;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:1.35rem;
-  color:var(--gold-soft);
-  max-width:700px;
-  text-shadow:0 0 20px rgba(214,179,106,.25);
-}
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.5rem;
+    }
 
-/* EMPHASIS */
-strong{color:var(--text-main)}
-em{color:var(--gold-soft)}
+    ul li {
+      padding: 0.5rem 0;
+      color: var(--text-muted);
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  header h1{font-size:2.4rem}
-  h2{font-size:1.45rem}
-  p{text-align:left}
-}
-</style>
+    ul li::before {
+      content: "✦ ";
+      color: var(--gold);
+    }
+
+    /* PROPHECY */
+    .prophecy {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--gold-soft);
+      margin: 3rem auto;
+      max-width: 720px;
+      text-shadow: 0 0 25px rgba(214,179,106,0.3);
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
 </head>
 
 <body>
 <main>
 
-<header>
-  <h1>The League: Fatebound</h1>
-  <p>Bound by fate. United by choice.</p>
-</header>
+  <!-- Header -->
+  <header>
+    <h1>The League: Fatebound</h1>
+    <p>Bound by fate. United by choice.</p>
+  </header>
 
-<section class="featured-image">
-  <img src="images/IMG_3337.jpeg" alt="The League: Fatebound">
-  <p><em>Two souls, countless moments, one destiny… Fate seals the bond.</em></p>
-</section>
+  <!-- Featured Image -->
+  <section class="featured-image">
+    <img src="images/IMG_3337.jpeg" alt="The League: Fatebound" class="title-image">
+    <p><em>Two souls, countless moments, one destiny… Fate seals the bond.</em></p>
+  </section>
 
-<section>
-  <h2>Overview</h2>
-  <p><strong>The League: Fatebound</strong> is a forthcoming wedding ceremony uniting
-  <strong>TBD</strong> and <strong>TBD</strong>—a union forged through destiny and affirmed by choice.</p>
-</section>
+  <!-- Overview -->
+  <section>
+    <h2>Overview</h2>
+    <p>
+      <strong>The League: Fatebound</strong> is a forthcoming wedding ceremony uniting
+      <strong>TBD</strong> and <strong>TBD</strong>—a union forged through destiny,
+      affirmed by choice, and celebrated among family and friends.
+    </p>
+    <p>
+      What began as coincidence now stands as purpose, as two paths converge
+      into one eternal journey.
+    </p>
+  </section>
 
-<hr>
+  <hr>
 
-<section>
-  <h2>Quick Facts</h2>
-  <table>
-    <tr><th>Event Name</th><td><em>The League: Fatebound</em></td></tr>
-    <tr><th>Couple</th><td>TBD & TBD</td></tr>
-    <tr><th>Date</th><td>TBD</td></tr>
-    <tr><th>Venue</th><td>TBD</td></tr>
-    <tr><th>Hashtag</th><td>#Fatebound</td></tr>
-    <tr><th>Status</th><td>Upcoming</td></tr>
-  </table>
-</section>
+  <!-- Quick Facts -->
+  <section>
+    <h2>Quick Facts</h2>
+    <table>
+      <tr><th>Event Name</th><td><em>The League: Fatebound</em></td></tr>
+      <tr><th>Couple</th><td>TBD & TBD</td></tr>
+      <tr><th>Date</th><td>TBD</td></tr>
+      <tr><th>Venue</th><td>TBD</td></tr>
+      <tr><th>Hashtag</th><td>#Fatebound</td></tr>
+      <tr><th>Status</th><td>Upcoming</td></tr>
+    </table>
+  </section>
 
-<hr>
+  <hr>
 
-<section>
-  <h2>Our Story</h2>
-  <p><strong>Every epic begins with a meeting.</strong></p>
-  <div class="prophecy">
-    Two souls, countless moments, one destiny… Fate seals the bond.
-  </div>
-</section>
+  <!-- Our Story -->
+  <section>
+    <h2>Our Story</h2>
+    <p><strong>Every epic begins with a meeting.</strong></p>
+    <p>
+      Through countless moments—quiet and profound—two souls found their way
+      toward one destiny.
+    </p>
+    <div class="prophecy">
+      Two souls, countless moments, one destiny… Fate seals the bond.
+    </div>
+  </section>
 
-<hr>
+  <hr>
 
-<section>
-  <h2>Timeline of Events</h2>
-  <table>
-    <tr><th>TBD</th><td>The Gathering Begins</td></tr>
-    <tr><th>TBD</th><td>Ceremony — Bound by Fate</td></tr>
-    <tr><th>TBD</th><td>Vows — United by Choice</td></tr>
-    <tr><th>TBD</th><td>Reception & Revelry</td></tr>
-  </table>
-</section>
+  <!-- Fateful Gathering -->
+  <section>
+    <h2>The Fateful Gathering</h2>
+    <p>
+      This is more than a ceremony—it is a <strong>Fateful Gathering</strong>, where allies,
+      witnesses, and loved ones assemble to honour a bond shaped by destiny.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- Timeline -->
+  <section>
+    <h2>Timeline of Events</h2>
+    <table>
+      <tr><th>TBD</th><td>Arrival of Guests — The Gathering Begins</td></tr>
+      <tr><th>TBD</th><td>Ceremony Commences — Bound by Fate</td></tr>
+      <tr><th>TBD</th><td>Vows & Union — United by Choice</td></tr>
+      <tr><th>TBD</th><td>Reception & Revelry</td></tr>
+      <tr><th>TBD</th><td>Closing Moments</td></tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- Gallery -->
+  <section>
+    <h2>Gallery</h2>
+    <ul>
+      <li>The First Encounter</li>
+      <li>The Journey Together</li>
+      <li>Where Fate Awaits</li>
+      <li>Before the Vows</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- RSVP -->
+  <section>
+    <h2>RSVP</h2>
+    <p>Your response marks your place in this <strong>Fateful Gathering</strong>.</p>
+    <ul>
+      <li>RSVP Method: TBD</li>
+      <li>Deadline: TBD</li>
+    </ul>
+  </section>
 
 </main>
 </body>
