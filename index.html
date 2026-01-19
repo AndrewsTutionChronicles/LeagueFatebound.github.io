@@ -182,6 +182,43 @@ section ul li strong {
       h1 { font-size: 2.4rem; }
       h2 { font-size: 1.4rem; }
     }
+/* GALLERY */
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid rgba(214,179,106,0.35);
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.85),
+    inset 0 0 20px rgba(214,179,106,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 60px rgba(214,179,106,0.35),
+    0 0 80px rgba(0,0,0,0.9);
+}
+
+.gallery figcaption {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: var(--gold-soft);
+  font-size: 1rem;
+}
   </style>
 </head>
 
@@ -293,16 +330,37 @@ section ul li strong {
   <hr>
 
   <!-- Gallery -->
-  <section>
-    <h2>Gallery</h2>
-    <ul>
-      <li>The First Encounter</li>
-      <li>The Journey Together</li>
-      <li>Where Fate Awaits</li>
-      <li>Before the Vows</li>
-      <li>Others</li>
-    <ul>
-  </section>
+<section>
+  <h2>Gallery</h2>
+
+  <div class="gallery">
+    <figure>
+      <img src="images/IMG_0025.jpg" alt="The First Encounter">
+      <figcaption>The First Encounter</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_3351.jpeg" alt="The Journey Together">
+      <figcaption>The Journey Together</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_4102.jpg" alt="Where Fate Awaits">
+      <figcaption>Where Fate Awaits</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_4988.jpg" alt="Before the Vows">
+      <figcaption>Before the Vows</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_6001.jpg" alt="Others">
+      <figcaption>Others</figcaption>
+    </figure>
+  </div>
+</section>
+
 
   <hr>
 
